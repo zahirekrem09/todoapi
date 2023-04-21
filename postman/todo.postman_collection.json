@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "36a533cd-6677-4132-9438-174534696cfd",
+		"name": "todo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "11636429"
+	},
+	"item": [
+		{
+			"name": "All Todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3333/api/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "Get One",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:3333/api/tasks/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"task\": \"This is task 2\",\n    \"description\": \"This description 2\",\n    \"due_date\": \"2023-04-24\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3333/api/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 3,\n    \"task\": \"This is task 33\",\n    \"status\": 1,\n    \"due_date\": \"2023-04-26\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3333/api/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3333/api/tasks"
+			},
+			"response": []
+		}
+	]
+}
